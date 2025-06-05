@@ -1,20 +1,18 @@
-# 🧩 Todo Application – Micro Frontend (Host App)
+# 🧩 Todo MFE – Host App
 
-This project is a **Micro Frontend (MFE)** Todo List application built with **React** and **TypeScript**. It serves as the **host container** that integrates independent remote MFE modules via **Webpack 5 Module Federation**.
+This project is the **Host App** in a **React + TypeScript** based Micro Frontend (MFE) architecture using **Webpack 5 Module Federation**. It dynamically loads independent, remote components to render a modular Todo List UI.
 
 ---
 
 ## 🧠 Architecture Overview
 
-The app is structured using a microfrontend architecture and loads three independent modules from the remote app:
+The host app integrates three remote modules from `todo-mfe-remote`:
 
-1. **TodoList** – Displays the list of todo tasks  
-2. **TodoItem** – Renders individual todo task items  
-3. **Filter** – Dropdown to filter tasks by status (All, Active, Completed)
+1. **TodoList** – Renders the list of tasks  
+2. **TodoItem** – Represents each individual task  
+3. **Filter** – Dropdown to filter tasks by `All`, `Active`, or `Completed`
 
-These modules are **federated and consumed** from the remote MFE:
-
-🔗 [`remote-todo-app`](https://github.com/rohittiwariofficial/remote-todo-app)
+> These are loaded using Module Federation from the remote app running on a separate port.
 
 ---
 
@@ -23,8 +21,8 @@ These modules are **federated and consumed** from the remote MFE:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rohittiwariofficial/host-app.git
-cd host-app
+git clone https://github.com/rohittiwariofficial/todo-mfe-host.git
+cd todo-mfe-host
 ```
 
 ### 2. Install dependencies
@@ -35,7 +33,7 @@ npm install
 yarn install
 ```
 
-### 3. Start the development server
+### 3. Run the development server
 
 ```bash
 npm start
@@ -43,41 +41,33 @@ npm start
 yarn start
 ```
 
-> ⚠️ Make sure the [remote-todo-app](https://github.com/rohittiwariofficial/remote-todo-app) is running locally on port `3001`.
+> ⚠️ Before starting this app, make sure `todo-mfe-remote` is running on [http://localhost:3001](http://localhost:3001)
 
 ---
 
-## ✅ Usage
+## ✅ Features
 
-- Add a new task using the input field (press `Enter` to submit).
-- Mark tasks as completed via checkbox.
-- Use the dropdown to filter by `All`, `Active`, or `Completed`.
+- Add, complete, and filter todo tasks  
+- Microfrontend architecture with remote modules  
+- Dynamic module loading via Webpack 5 Module Federation  
+- Task persistence using `localStorage`
 
 ---
 
-## 🔍 Features
+## 🧩 Related Microfrontend
 
-- Add, complete, and filter todo tasks
-- Microfrontend architecture with modular components
-- Federated module loading via Webpack Module Federation
-- Data persisted via `localStorage`
+This host app consumes components from:
+
+👉 [`todo-mfe-remote`](https://github.com/rohittiwariofficial/todo-mfe-remote)
 
 ---
 
 ## 🔧 Tech Stack
 
-- React + TypeScript
-- Webpack 5 + Module Federation
+- React  
+- TypeScript  
+- Webpack 5 (Module Federation)  
 - HTML5, CSS3
-- Microfrontend Architecture (Host)
-
----
-
-## 📦 Related Micro Frontend
-
-This host app consumes modules from:
-
-👉 [`remote-todo-app`](https://github.com/rohittiwariofficial/remote-todo-app)
 
 ---
 
@@ -88,3 +78,7 @@ Senior MERN / Backend Developer
 [LinkedIn](https://www.linkedin.com/in/rohittiwariofficial)
 
 ---
+
+## 📜 License
+
+MIT – free to use and modify.
