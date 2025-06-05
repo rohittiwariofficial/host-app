@@ -1,67 +1,90 @@
-# Todo Application
+# 🧩 Todo Application – Micro Frontend (Host App)
 
-## Overview
+This project is a **Micro Frontend (MFE)** Todo List application built with **React** and **TypeScript**. It serves as the **host container** that integrates independent remote MFE modules via **Webpack 5 Module Federation**.
 
-This application is a microfrontend Todo List aaplication built with React and TypeScript. It allows users to create, manage and filter todo tasks. The application consists of three microfrontend modules:
+---
 
-1. **TodoList**: Responsible to display todo task list.
-2. **TodoItem**: Responsible for rendering individual todo items.
-3. **Filter**: Responsible for rendering filter dropdown to filter todo task list.
+## 🧠 Architecture Overview
 
-## Installation
+The app is structured using a microfrontend architecture and loads three independent modules from the remote app:
 
-To run this application locally, follow these steps:
+1. **TodoList** – Displays the list of todo tasks  
+2. **TodoItem** – Renders individual todo task items  
+3. **Filter** – Dropdown to filter tasks by status (All, Active, Completed)
 
-1. Clone below repository to your local machine:
+These modules are **federated and consumed** from the remote MFE:
 
-   ```bash
-       git clone https://github.com/rohittiwariofficial/host-app.git
-   ```
+🔗 [`remote-todo-app`](https://github.com/rohittiwariofficial/remote-todo-app)
 
-2. Navigate to the project directory:
+---
 
-   ```bash
-       cd host-app
-   ```
+## 🚀 Getting Started
 
-3. Install dependencies using npm or yarn:
+### 1. Clone the repository
 
-   ```bash
-       npm install
-       # or
-       yarn install
-   ```
+```bash
+git clone https://github.com/rohittiwariofficial/host-app.git
+cd host-app
+```
 
-4. Start the development server:
+### 2. Install dependencies
 
-   ```bash
-       npm start
-       # or
-       yarn start
-   ```
+```bash
+npm install
+# or
+yarn install
+```
 
-5. Open your browser and visit `http://localhost:3000` to view the application.
+### 3. Start the development server
 
-## Usage
+```bash
+npm start
+# or
+yarn start
+```
 
-- Add new task by entering a task descrition in input field and pressing `Enter`.
-- Mark tasks as completed by clicking on the checkbox next to each task.
-- Filter the todo tasks list by selecting one of the option of dropdown i.e. all, active and completed.
+> ⚠️ Make sure the [remote-todo-app](https://github.com/rohittiwariofficial/remote-todo-app) is running locally on port `3001`.
 
-## Features
+---
 
-- Add new todo task.
-- Mark todo task completed or active.
-- Filter todo task based on their completionn status (all, active, completed).
-- Persistance of the todo tasks using `localStorage` to ensure data persistence across page refreshes.
+## ✅ Usage
 
-## Architecture
+- Add a new task using the input field (press `Enter` to submit).
+- Mark tasks as completed via checkbox.
+- Use the dropdown to filter by `All`, `Active`, or `Completed`.
 
-This application follows a microfrontend architecture, with sepearte module for todo list, rending individual todo items and filter controls. Each module operates independently and contributes to the overall functionality of the application.
+---
 
-## Technologies Used
+## 🔍 Features
 
-- React Js
-- TypeScript
-- HTML5 & CSS3
-- Webpack
+- Add, complete, and filter todo tasks
+- Microfrontend architecture with modular components
+- Federated module loading via Webpack Module Federation
+- Data persisted via `localStorage`
+
+---
+
+## 🔧 Tech Stack
+
+- React + TypeScript
+- Webpack 5 + Module Federation
+- HTML5, CSS3
+- Microfrontend Architecture (Host)
+
+---
+
+## 📦 Related Micro Frontend
+
+This host app consumes modules from:
+
+👉 [`remote-todo-app`](https://github.com/rohittiwariofficial/remote-todo-app)
+
+---
+
+## 🙋‍♂️ Author
+
+**Rohit Tiwari**  
+Senior MERN / Backend Developer  
+[LinkedIn](https://www.linkedin.com/in/rohittiwariofficial)
+
+---
